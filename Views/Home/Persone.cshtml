@@ -1,0 +1,28 @@
+﻿@model List<Persona>
+@{
+    ViewData["Title"] = "Elenco persone";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Persone</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Cognome</th>
+        </tr>
+        <tbody>
+            @foreach (Persona p in Model)
+            {
+                <tr>
+                    <td>@p.ID</td>
+                    <td>@p.Nome</td>
+                    <td>@p.Cognome</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>
